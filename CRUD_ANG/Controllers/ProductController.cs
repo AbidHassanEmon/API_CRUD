@@ -8,9 +8,11 @@ using System.Web.Http;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Data;
+using System.Web.Http.Cors;
 
 namespace CRUD_ANG.Controllers
 {
+  [EnableCors("*","*","*")]
   public class ProductController : ApiController
   {
     SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["DB"].ConnectionString);

@@ -65,3 +65,6 @@ C:\Users\abidh\Desktop\EMON\CRUD_ANG\CRUD_ANG\obj\Debug\CRUD_ANG.csproj.CoreComp
 C:\Users\abidh\Desktop\EMON\CRUD_ANG\CRUD_ANG\obj\Debug\CRUD_ANG.csproj.CopyComplete
 C:\Users\abidh\Desktop\EMON\CRUD_ANG\CRUD_ANG\obj\Debug\CRUD_ANG.dll
 C:\Users\abidh\Desktop\EMON\CRUD_ANG\CRUD_ANG\obj\Debug\CRUD_ANG.pdb
+C:\Users\abidh\Desktop\EMON\CRUD_ANG\CRUD_ANG\bin\System.Web.Cors.dll
+C:\Users\abidh\Desktop\EMON\CRUD_ANG\CRUD_ANG\bin\System.Web.Http.Cors.dll
+C:\Users\abidh\Desktop\EMON\CRUD_ANG\CRUD_ANG\bin\System.Web.Http.Cors.xml
