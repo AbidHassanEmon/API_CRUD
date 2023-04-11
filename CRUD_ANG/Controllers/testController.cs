@@ -44,29 +44,31 @@ namespace CRUD_ANG.Controllers
 
       return products;
     }
-  }
-  [Route("api/Product/{id}")]
-  public Product get(int id)
-  {
-    SqlDataAdapter s = new SqlDataAdapter("ProductByID", con);
-    s.SelectCommand.CommandType = CommandType.StoredProcedure;
-    s.SelectCommand.Parameters.AddWithValue("@ID", id);
-    DataTable dt = new DataTable();
-    s.Fill(dt);
-    Product p = new Product();
-    if (dt.Rows.Count > 0)
+    [Route("api/Product/{id}")]
+    public Product get(int id)
     {
-      p.ID = Convert.ToInt32(dt.Rows[0]["ID"]);
-      p.Name = dt.Rows[0]["Name"].ToString();
-      p.Price = Convert.ToInt32(dt.Rows[0]["Price"]);
-      p.Description = dt.Rows[0]["Description"].ToString();
-      p.Quantity = Convert.ToInt32(dt.Rows[0]["Quantity"]);
-    }
-    else
-    {
-      return null;
+      SqlDataAdapter s = new SqlDataAdapter("ProductByID", con);
+      s.SelectCommand.CommandType = CommandType.StoredProcedure;
+      s.SelectCommand.Parameters.AddWithValue("@ID", id);
+      DataTable dt = new DataTable();
+      s.Fill(dt);
+      Product p = new Product();
+      if (dt.Rows.Count > 0)
+      {
+        p.ID = Convert.ToInt32(dt.Rows[0]["ID"]);
+        p.Name = dt.Rows[0]["Name"].ToString();
+        p.Price = Convert.ToInt32(dt.Rows[0]["Price"]);
+        p.Description = dt.Rows[0]["Description"].ToString();
+        p.Quantity = Convert.ToInt32(dt.Rows[0]["Quantity"]);
+      }
+      else
+      {
+        return null;
+      }
+
+      return p;
     }
 
-    return p;
   }
+  
 }
